@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Web</title>
+
+    <!-- scripts -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>  
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- assets -->
+    <a-assets>
+
+        <!-- imagenes texturas -->
+        <img id="nasa" src="assets/imagenes/texturas/nasa.jpg">
+        <img id="dots" src="assets/imagenes/texturas/puntitos.jpg">
+        <img id="pipeline" src="assets/imagenes/texturas/pipeline.jpg">
+        <img id="laser" src="assets/imagenes/texturas/laser.jpg">
+        <img id="ladrillo" src="assets/imagenes/texturas/ladrillo.jpg">
+        <img id="bedblue" src="assets/imagenes/texturas/bed_blue.jpg">
+        <img id="bed" src="assets/imagenes/texturas/bed.jpg">
+        <img id="charco" src="assets/imagenes/texturas/charco.png">
+        <img id="checkered" src="assets/imagenes/texturas/checkered.jpg">
+        <img id="checkered2" src="assets/imagenes/texturas/checkered.png">
+        <img id="degradado" src="assets/imagenes/texturas/degradado_01.jpg">
+        <img id="estrellas" src="assets/imagenes/texturas/estrellado.jpg">
+        <img id="gridazul" src="assets/imagenes/texturas/grid_blue.jpg">
+        <img id="gridred" src="assets/imagenes/texturas/grid_red.jpg">
+        <img id="gridrojo" src="assets/imagenes/texturas/grid_rojo.jpg">
+        <img id="grid" src="assets/imagenes/texturas/grid.png">
+        <img id="laserazul" src="assets/imagenes/texturas/laser_azul.jpg">
+        <img id="laserblanco" src="assets/imagenes/texturas/laser_blanco.jpg">
+        <img id="laser" src="assets/imagenes/texturas/laser.jpg">
+        <img id="lasers" src="assets/imagenes/texturas/lasers.jpg">
+        <img id="lasersblue" src="assets/imagenes/texturas/lasers_blue.jpg">
+        <img id="lasersred" src="assets/imagenes/texturas/lasers_red.jpg">
+        <img id="lasersyellow" src="assets/imagenes/texturas/lasers_yellow.jpg">
+        <img id="lizard" src="assets/imagenes/texturas/lizard.jpg">
+        <img id="lizardblue" src="assets/imagenes/texturas/lizard_blue.jpg">
+        <img id="lizardred" src="assets/imagenes/texturas/lizard_red.jpg">
+        <img id="lizardyellow" src="assets/imagenes/texturas/lizard_yellow.jpg">
+        <img id="metalblue" src="assets/imagenes/texturas/metal_blue.jpg">
+        <img id="metalred" src="assets/imagenes/texturas/metal_red.jpg">
+        <img id="metalyellow" src="assets/imagenes/texturas/metal_yellow.jpg">
+        <img id="metal" src="assets/imagenes/texturas/metal.jpg">
+        <img id="paper" src="assets/imagenes/texturas/paper.jpg">
+        <img id="pipe" src="assets/imagenes/texturas/pipe.jpg">
+        <img id="puntitos" src="assets/imagenes/texturas/puntitos.jpg">
+        <img id="rocks" src="assets/imagenes/texturas/rocks.jpg">
+        <img id="universo" src="assets/imagenes/texturas/RvWAIf.jpg">
+        <img id="universo1" src="assets/imagenes/texturas/space1.png">
+        <img id="universo2" src="assets/imagenes/texturas/space2.png">
+        <img id="space" src="assets/imagenes/texturas/universo.jpg">
+        <img id="whitenet" src="assets/imagenes/texturas/white-net.jpg">
+
+        <!-- fotos -->
+        <img id="miva" src="assets/imagenes/fotos/nwn-13.jpg">
+        <img id="juan" src="assets/imagenes/fotos/nwn-06.jpg">
+        <img id="manolo" src="assets/imagenes/fotos/nwn-03.jpg">
+        <img id="checkered" src="assets/imagenes/texturas/checkered.png">
+
+        <!-- logos -->
+        <img id="wrongweb" src="assets/imagenes/logos/wrongweblogo.png">
+        <img id="highlightpictures" src="assets/imagenes/logos/highlight-pictures-maintxt.png">
+        <img id="nwn" src="assets/imagenes/logos/Logo-NWN.png">
+        <img id="nwn2" src="assets/imagenes/logos/logo_nwn.png">
+
+        <!-- ciencia -->
+        <img id="ciencia1" src="assets/imagenes/ciencia1.jpg">
+        <img id="ciencia2" src="assets/imagenes/datos-cientificos-2-1024x683.jpg">
+        <img id="ciencia3" src="assets/imagenes/1990s-gene-function.jpg">
+        <img id="ciencia4" src="assets/imagenes/grafik.jpg"> 
+
+        <!-- equirectangular -->
+        <img id="gradiente" src="assets/equirectangular/gradiente.jpg">
+        <img id="cieloamarillo" src="assets/equirectangular/cielo_amarillo.jpg">
+        <img id="cieloazul" src="/assets/equirectangular/cielo_azul.jpg">   
+        <img id="cieloestrellado" src="assets/equirectangular/cielo_estrellado.jpg">
+        <img id="cielorojo" src="assets/equirectangular/cielo_rojo.jpg">
+        <img id="cielo" src="assets/imagenes/extras/cielo.jpg">
+        <img id="cabina" src="assets/imagenes/extra/cabina.jpg">
+    
+        <!-- objetos 3d -->
+
+        <a-asset-item id="adn" src="/assets/3d/adn.gltf"></a-asset-item>
+        <a-asset-item id="adn2" src="/assets/3d/adn2.gltf"></a-asset-item>
+        <a-asset-item id="avion" src="/assets/3d/avion.gltf"></a-asset-item>
+        <a-asset-item id="bateria" src="/assets/3d/bateria.gltf"></a-asset-item>
+        <a-asset-item id="box1" src="/assets/3d/box1.gltf"></a-asset-item>
+        <a-asset-item id="cohete" src="/assets/3d/cohete.gltf"></a-asset-item>
+        <a-asset-item id="cohete2" src="/assets/3d/cohete2.gltf"></a-asset-item>
+        <a-asset-item id="compu1" src="/assets/3d/compu1.gltf"></a-asset-item>
+        <a-asset-item id="compu2" src="/assets/3d/compu2.gltf"></a-asset-item>
+        <a-asset-item id="computadora" src="/assets/3d/computadora.glft"></a-asset-item>
+        <a-asset-item id="consola" src="/assets/3d/consola.gltf"></a-asset-item>
+        <a-asset-item id="corazon" src="/assets/3d/corazon.gltf"></a-asset-item>
+        <a-asset-item id="corazon2" src="/assets/3d/corazon2.gltf"></a-asset-item>
+        <a-asset-item id="cuarto" src="/assets/3d/cuarto.gltf"></a-asset-item>
+        <a-asset-item id="cubes" src="/assets/3d/cubes.gltf"></a-asset-item>
+        <a-asset-item id="cubo" src="/assets/3d/cubo.gltf"></a-asset-item>
+        <a-asset-item id="dna" src="/assets/3d/dna.gltf"></a-asset-item>
+        <a-asset-item id="escaleras" src="/assets/3d/escaleras.gltf"></a-asset-item>
+        <a-asset-item id="escaleras2" src="/assets/3d/escaleras2.gltf"></a-asset-item>
+        <a-asset-item id="escaleras3" src="/assets/3d/escaleras3.gltf"></a-asset-item>
+        <a-asset-item id="escaleras4" src="/assets/3d/escaleras4.gltf"></a-asset-item>
+        <a-asset-item id="escaleras5" src="/assets/3d/escaleras5.gltf"></a-asset-item>
+        <a-asset-item id="escaleras6" src="/assets/3d/escaleras6.gltf"></a-asset-item>
+        <a-asset-item id="escaleras7" src="/assets/3d/escaleras7.gltf"></a-asset-item>
+        <a-asset-item id="escaleras8" src="/assets/3d/escaleras8.gltf"></a-asset-item>
+        <a-asset-item id="escaleras9" src="/assets/3d/escaleras9.gltf"></a-asset-item>
+        <a-asset-item id="escaleras10" src="/assets/3d/escaleras10.gltf"></a-asset-item>
+        <a-asset-item id="espiral" src="/assets/3d/espiral.gltf"></a-asset-item>
+        <a-asset-item id="espiral1" src="/assets/3d/espiral1.gltf"></a-asset-item>
+        <a-asset-item id="espiral2" src="/assets/3d/espiral2.gltf"></a-asset-item>
+        <a-asset-item id="estrella" src="/assets/3d/estrella.gltf"></a-asset-item>
+        <a-asset-item id="estrellaazul" src="/assets/3d/estrellaazul.gltf"></a-asset-item>
+        <a-asset-item id="estrellamix" src="/assets/3d/estrellamix.gltf"></a-asset-item>
+        <a-asset-item id="estrellanegra" src="/assets/3d/estrellanegra.gltf"></a-asset-item>
+        <a-asset-item id="estrellaroja" src="/assets/3d/estrellaroja.gltf"></a-asset-item>
+        <a-asset-item id="experiment" src="/assets/3d/experiment.gltf"></a-asset-item>
+        <a-asset-item id="experiment2" src="/assets/3d/experiment2.gltf"></a-asset-item>
+        <a-asset-item id="fender" src="/assets/3d/fender.gltf"></a-asset-item>
+        <a-asset-item id="globo" src="/assets/3d/globo.gltf"></a-asset-item>
+        <a-asset-item id="globorojo" src="/assets/3d/globorojo.gltf"></a-asset-item>
+        <a-asset-item id="guitarra" src="/assets/3d/guitarra.gltf"></a-asset-item>
+        <a-asset-item id="gym" src="/assets/3d/gym.gltf"></a-asset-item>
+        <a-asset-item id="hex" src="/assets/3d/hex.gltf"></a-asset-item>
+        <a-asset-item id="lab" position="-25.40757 0 -6.33493" src="/assets/3d/lab.gltf"></a-asset-item>
+        <a-asset-item id="lab1" src="/assets/3d/adn.gltf"></a-asset-item>
+        <a-asset-item id="lava" src="/assets/3d/lava.gltf"></a-asset-item>
+        <a-asset-item id="lava1" src="/assets/3d/lava1.gltf"></a-asset-item>
+        <a-asset-item id="lava2" src="/assets/3d/lava2.gltf"></a-asset-item>
+        <a-asset-item id="lava3" src="/assets/3d/lava3.gltf"></a-asset-item>
+        <a-asset-item id="lava4" src="/assets/3d/lava4.gltf"></a-asset-item>
+        <a-asset-item id="lava5" src="/assets/3d/lava5.gltf"></a-asset-item>
+        <a-asset-item id="lavacohete" src="/assets/3d/lavacohete.gltf"></a-asset-item>
+        <a-asset-item id="lights" src="/assets/3d/lights.gltf"></a-asset-item>
+        <a-asset-item id="luz" src="/assets/3d/luz.gltf"></a-asset-item>
+        <a-asset-item id="man" src="/assets/3d/man.gltf"></a-asset-item>
+        <a-asset-item id="mario" src="/assets/3d/mario.gltf"></a-asset-item>
+        <a-asset-item id="moleculas" src="/assets/3d/moleculas.gltf"></a-asset-item>
+        <a-asset-item id="nube" src="/assets/3d/nube.gltf"></a-asset-item>
+        <a-asset-item id="onda" src="/assets/3d/onda.gltf"></a-asset-item>
+        <a-asset-item id="onda1" src="/assets/3d/onda1.gltf"></a-asset-item>
+        <a-asset-item id="onda2" src="/assets/3d/onda2.gltf"></a-asset-item>
+        <a-asset-item id="onda3" src="/assets/3d/onda3.gltf"></a-asset-item>
+        <a-asset-item id="onda4" src="/assets/3d/onda4.gltf"></a-asset-item>
+        <a-asset-item id="onda5" src="/assets/3d/onda5.gltf"></a-asset-item>
+        <a-asset-item id="onda6" src="/assets/3d/onda6.gltf"></a-asset-item>
+        <a-asset-item id="onda7" src="/assets/3d/onda7.gltf"></a-asset-item>
+        <a-asset-item id="onda8" src="/assets/3d/onda8.gltf"></a-asset-item>
+        <a-asset-item id="peces" src="/assets/3d/peces.gltf"></a-asset-item>
+        <a-asset-item id="playground" src="/assets/3d/playground.gltf"></a-asset-item>
+        <a-asset-item id="redstar" src="/assets/3d/redstar.gltf"></a-asset-item>
+        <a-asset-item id="rocas" src="/assets/3d/rocas.gltf"></a-asset-item>
+        <a-asset-item id="room" src="/assets/3d/room.gltf"></a-asset-item>
+        <a-asset-item id="silla" src="/assets/3d/silla.gltf"></a-asset-item>
+        <a-asset-item id="star" src="/assets/3d/star.gltf"></a-asset-item>
+        <a-asset-item id="teclado" src="/assets/3d/teclado.gltf"></a-asset-item>
+        <a-asset-item id="tel" src="/assets/3d/tel.gltf"></a-asset-item>
+        <a-asset-item id="timeless" src="/assets/3d/timeless.gltf"></a-asset-item>
+        <a-asset-item id="timeless2" src="/assets/3d/timeless2.gltf"></a-asset-item>
+        <a-asset-item id="transbordador" src="/assets/3d/transbordador.gltf"></a-asset-item>
+        <a-asset-item id="tunel" src="/assets/3d/tunel.glb"></a-asset-item>
+        <a-asset-item id="tunel1" src="/assets/3d/tunel1.glb"></a-asset-item>
+        <a-asset-item id="tunel2" src="/assets/3d/tunel2.glb"></a-asset-item>
+        <a-asset-item id="tunel3" src="/assets/3d/tunel3.glb"></a-asset-item>
+        <a-asset-item id="tunel4" src="/assets/3d/tunel4.glb"></a-asset-item>
+        <a-asset-item id="tunel5" src="/assets/3d/tunel5.glb"></a-asset-item>
+        <a-asset-item id="wave" src="/assets/3d/wave.gltf"></a-asset-item>
+        
+        <!-- audios -->
+    
+        <!-- prueba de mixins-->
+
+    <a-mixin id="red" material="color: red"></a-mixin>
+    <a-mixin id="blue" material="color: blue"></a-mixin>
+    <a-mixin id="cube" geometry="primitive: box"></a-mixin>
+
+    </a-assets>
+
+</head>
+
+<body>
+    
+<a-scene>
+
+    <!--camara --> 
+    
+    <a-entity camera="" position="-35.74072883812806 1.6 -6.883536227132678" wasd-controls="acceleration: 100" rotation="20.626480624709625 308.25129378038355 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+
+    <!-- cielo y piso -->
+
+<a-entity environment=
+"groundTexture: checkerboard; 
+skyColor: blue; 
+groundColor: black; 
+groundColor2: white; 
+lighting: none; 
+ground: flat; 
+active: true; 
+horizonColor: #ddd; 
+lightPosition: -0.11 1 0.33; 
+fog: 0.5; 
+dressingScale: 1; 
+dressingVariance: 0 0 0" 
+visible="">
+
+<a-entity class="environment" 
+position="0 50 0" 
+light="type: hemisphere; color: #7f7fff; intensity: 0.6; groundColor: black" visible="false">
+
+</a-entity>
+
+<a-entity class="environment" position="-0.11 1 0.33" light="intensity: 0.6; shadowCameraLeft: -10; shadowCameraBottom: -10; shadowCameraRight: 10; shadowCameraTop: 10" visible="false">
+
+</a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="NaN NaN 3" shadow="cast: false; receive: false"></a-entity>
+<a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="NaN NaN 3" shadow="cast: false; receive: false"></a-entity>
+<a-entity rotation="-90 0 0" class="environmentGround environment" visible="" scale="NaN NaN 3" shadow="cast: false; receive: false"></a-entity>
+<a-entity class="environmentDressing environment" visible="false"></a-entity>
+<a-sky radius="195" theta-length="110" class="environment" material="color: #ffffff; fog: false; src: #gradiente "visible="" geometry=""></a-sky>
+
+</a-entity>
+
+<!-- iluminación extra -->
+
+<a-entity light="type: ambient"></a-entity>
+
+
+<a-entity>
+
+    <a-entity tuneleria id="tuneleria">
+    <!-- tunel 1-->
+    <a-box id="hi" src="#cabina" position="2.5 2.5 -10" rotation="0 90 0" scale="30 5 1"></a-box>
+    <a-box src="#ladrillo" position="0 5 -10" rotation="-90 90 0" scale="30 6 1"></a-box>
+    <a-box src="#laser" position="-2.5 2.5 -10" rotation="0 90 0" scale="30 5 1"></a-box>
+    <a-plane src="#pipeline" position="0 0.1 -10" rotation="-90 90 0" scale="30 6 1"></a-plane>
+
+    <!-- tunel 2 -->
+    <a-box src="#dots" position="-7.5 2.5 -10" rotation="0 90 0" scale="30 5 1" material="" geometry=""></a-box>
+    <a-box src="#pipeline" position="-5 5 -10" rotation="-90 90 0" scale="30 6 1" material="" geometry=""></a-box>
+    <a-plane src="#ladrillo" position="-5 0.1 -10" rotation="-90 90 0" scale="30 6 1" material="" geometry=""></a-plane>
+
+     <!-- tunel 3 -->
+     <a-box src="#ladrillo" position="-10 5 -10" rotation="-90 90 0" scale="30 6 1" material="" geometry=""></a-box>
+     <a-box src="#laser" position="-12.5 2.5 -10" rotation="0 90 0" scale="30 5 1" material="" geometry=""></a-box>
+     <a-plane src="#nasa" position="-10 0.1 -10" rotation="-90 90 0" scale="30 6 1" material="" geometry=""></a-plane>
+
+    </a-entity>
+
+</a-entity>
+
+<!-- instalación esferas -->
+
+<a-entity esfericas id="esfericas">
+<a-sphere src="#cielo" radius="3" position="17.28531 0.5 -39.71621" material="" geometry=""></a-sphere>
+<a-sphere src="#ladrillo" position="53.07656 32.62865 0.80253" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#pipeline" radius="2" position="39.70651 29.90532 -54.68529" material="" geometry="radius: 5.05"></a-sphere>
+<a-sphere src="#pipeline" radius="2" position="65.63196 49.96473 -42.42146" material="" geometry="radius: 5.05"></a-sphere>
+<a-sphere src="#dots" radius="2" position="75.6555 60.50704 -13.85166" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#dots" radius="2" position="75.6555 60.50704 -89.32481" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#dots" radius="2" position="8.38443 60.50704 -89.32481" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#dots" radius="2" position="39.56636 55.91815 31.20459" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="40 22.60822 15.66148" rotation="180 -10 180" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="40 22.60822 -54.87383" rotation="180 -10 180" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#nasa" radius="2" position="96.68293 60.93905 -6.60729" material="" geometry="radius: 10"></a-sphere>
+<a-sphere src="#nasa" radius="2" position="-8.65938 60.93905 -78.39205" material="" geometry="radius: 10"></a-sphere>
+<a-sphere src="#nasa" radius="2" position="44.90246 32.1219 22.02833" material="" geometry="radius: 10"></a-sphere>
+<a-sphere src="#laser" radius="1" position="22.59896 10 -49.15889" material="" geometry="radius: 4"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="40 -4.56812 -54.87383" rotation="180 -10 180" material="" geometry="radius: 8"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="51.57755 5.41098 5.61332" rotation="180 -10 180" material="" geometry="radius: 8"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="76.12048 5.41098 -48.64382" rotation="180 -10 180" material="" geometry="radius: 8"></a-sphere>
+<a-sphere src="#wrongweb" radius="2" position="88.24376 16.0136 4.48479" rotation="180 -10 180" material="" geometry="radius: 8"></a-sphere>
+<a-sphere src="#ladrillo" position="53.07656 32.62865 -74.63177" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="83.20198 42.26145 -22.31154" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="21.54074 44.05945 -64.36322" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="128.89749 44.05945 -64.36322" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="128.89749 26.18705 -40.95483" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="128.89749 -3.11855 -99.80615" material="" geometry="radius: 5"></a-sphere>
+<a-sphere src="#ladrillo" position="128.89749 -3.11855 95.726" material="" geometry="radius: 5"></a-sphere>
+</a-entity>
+
+<!-- esferas con fotos -->
+
+<a-entity esferoides id="esferas-con-fotos" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+<a-sphere src="#juan" id="bolajuan"radius="3" position="26.59158 7.7512 -33.87722" rotation="24.000000000000004 -130 -20" material="" geometry="" scale="2 2 2" animation__esferajuan="dur: 1000.89"></a-sphere>
+<a-sphere src="#manolo" id="bolamanolo" position="40.5232 17.90779 -23.54162" rotation="4 -162 -44" material="" geometry="radius: 12"></a-sphere>
+<a-sphere src="#miva" id="bolamiva" position="32.98839 8 -3" rotation="0 -172 -29" material="" geometry="radius: 8"></a-sphere>
+</a-entity>
+
+<a-entity esferoides id="esferas-con-fotos2" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
+    <a-sphere src="#juan" id="bolajuan"radius="3" position="26.59158 7.7512 -33.87722" rotation="24.000000000000004 -130 -20" material="" geometry="" scale="2 2 2" animation__esferajuan="dur: 1000.89"></a-sphere>
+    <a-sphere src="#manolo" id="bolamanolo" position="40.5232 17.90779 -23.54162" rotation="4 -162 -44" material="" geometry="radius: 12"></a-sphere>
+    <a-sphere src="#miva" id="bolamiva" position="32.98839 8 -3" rotation="0 -172 -29" material="" geometry="radius: 8"></a-sphere>
+</a-entity>
+
+<!-- 3d -->
+
+<a-gltf-model src="#lab1" id="laboratorio1" scale="" position="-17.99337 60.82283 -11.58476"></a-gltf-model>
+<a-gltf-model src="#lab2" id="laboratorio2" scale="1 1 1" position="-15 0 -6.33493"></a-gltf-model>
+<a-gltf-model src="#lab3" id="laboratorio 3" scale="1 1 1" position="-10 0 -6.33493"></a-gltf-model>
+
+<a-entity tuneles id="chorlito" position="-31.83509 0 0">
+<a-gltf-model src="#tunel" id="el tunel" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-gltf-model>
+<a-gltf-model src="#tunel1" id="el tunel 1" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-gltf-model>
+<a-gltf-model src="#tunel2" id="el tunel 2" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-gltf-model>
+<a-gltf-model src="#tunel3" id="el tunel 3" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-gltf-model>
+<a-gltf-model src="#tunel4" id=" el tunel 4"nscale="0.1 0.1 0.1" position="-17.70242 0 54.45655"></a-gltf-model>
+<a-gltf-model src="#tunel5" id="el tunel 5" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-gltf-model>
+</a-entity>
+
+<a-gltf-model src="#lab" id="laboratorio" position="-24.82394 0 0"></a-gltf-model>
+
+<a-gltf-model src="#adn"></a-gltf-model>
+<a-gltf-model src="#adn2"></a-gltf-model>
+<a-gltf-model src="#avion"></a-gltf-model>
+<a-gltf-model src="#bateria"></a-gltf-model>
+<a-gltf-model src="#box1"></a-gltf-model>
+<a-gltf-model src="#cohete"></a-gltf-model>
+<a-gltf-model src="#cohete2"></a-gltf-model>
+<a-gltf-model src="#compu1"></a-gltf-model>
+<a-gltf-model src="#compu2"></a-gltf-model>
+<a-gltf-model src="#computadora"></a-gltf-model>
+<a-gltf-model src="#consola"></a-gltf-model>
+<a-gltf-model src="#corazon"></a-gltf-model>
+<a-gltf-model src="#corazon2"></a-gltf-model>
+<a-gltf-model src="#cuarto"></a-gltf-model>
+<a-gltf-model src="#cubes"></a-gltf-model>
+<a-gltf-model src="#cubo"></a-gltf-model>
+<a-gltf-model src="#dna"></a-gltf-model>
+<a-gltf-model src="#escaleras"></a-gltf-model>
+<a-gltf-model src="#escaleras2"></a-gltf-model>
+<a-gltf-model src="#escaleras3"></a-gltf-model>
+<a-gltf-model src="#escaleras4"></a-gltf-model>
+<a-gltf-model src="#escaleras5"></a-gltf-model>
+<a-gltf-model src="#escaleras6"></a-gltf-model>
+<a-gltf-model src="#escaleras7"></a-gltf-model>
+<a-gltf-model src="#escaleras8"></a-gltf-model>
+<a-gltf-model src="#escaleras9"></a-gltf-model>
+<a-gltf-model src="#escaleras10"></a-gltf-model>
+<a-gltf-model src="#espiral"></a-gltf-model>
+<a-gltf-model src="#espiral1"></a-gltf-model>
+<a-gltf-model src="#espiral2"></a-gltf-model>
+<a-gltf-model src="#estrella"></a-gltf-model>
+<a-gltf-model src="#estrellaazul"></a-gltf-model>
+<a-gltf-model src="#estrellamix"></a-gltf-model>
+<a-gltf-model src="#estrellanegra"></a-gltf-model>
+<a-gltf-model src="#estrellaroja"></a-gltf-model>
+<a-gltf-model src="#experiment"></a-gltf-model>
+<a-gltf-model src="#experiment2"></a-gltf-model>
+<a-gltf-model src="#fender"></a-gltf-model>
+<a-gltf-model src="#globo"></a-gltf-model>
+<a-gltf-model src="#globorojo"></a-gltf-model>
+<a-gltf-model src="#guitarra"></a-gltf-model>
+<a-gltf-model src="#gym"></a-gltf-model>
+<a-gltf-model src="#hex"></a-gltf-model>
+<a-gltf-model src="#lab"></a-gltf-model>
+<a-gltf-model src="#lab1"></a-gltf-model>
+<a-gltf-model src="#lava"></a-gltf-model>
+<a-gltf-model src="#lava1"></a-gltf-model>
+<a-gltf-model src="#lava2"></a-gltf-model>
+<a-gltf-model src="#lava3"></a-gltf-model>
+<a-gltf-model src="#lava4"></a-gltf-model>
+<a-gltf-model src="#lava5"></a-gltf-model>
+<a-gltf-model src="#lavacohete"></a-gltf-model>
+<a-gltf-model src="#lights"></a-gltf-model>
+<a-gltf-model src="#luz"></a-gltf-model>
+<a-gltf-model src="#man"></a-gltf-model>
+<a-gltf-model src="#mario"></a-gltf-model>
+<a-gltf-model src="#moleculas"></a-gltf-model>
+<a-gltf-model src="#nube"></a-gltf-model>
+<a-gltf-model src="#onda"></a-gltf-model>
+<a-gltf-model src="#onda1"></a-gltf-model>
+<a-gltf-model src="#onda2"></a-gltf-model>
+<a-gltf-model src="#onda3"></a-gltf-model>
+<a-gltf-model src="#onda4"></a-gltf-model>
+<a-gltf-model src="#onda5"></a-gltf-model>
+<a-gltf-model src="#onda6"></a-gltf-model>
+<a-gltf-model src="#onda7"></a-gltf-model>
+<a-gltf-model src="#onda8"></a-gltf-model>
+<a-gltf-model src="#peces"></a-gltf-model>
+<a-gltf-model src="#playground"></a-gltf-model>
+<a-gltf-model src="#redstar"></a-gltf-model>
+<a-gltf-model src="#rocas"></a-gltf-model>
+<a-gltf-model src="#room"></a-gltf-model>
+<a-gltf-model src="#silla"></a-gltf-model>
+<a-gltf-model src="#star"></a-gltf-model>
+<a-gltf-model src="#teclado"></a-gltf-model>
+<a-gltf-model src="#tel"></a-gltf-model>
+<a-gltf-model src="#timeless"></a-gltf-model>
+<a-gltf-model src="#timeless2"></a-gltf-model>
+<a-gltf-model src="#transbordador"></a-gltf-model>
+<a-gltf-model src="#tunel"></a-gltf-model>
+<a-gltf-model src="#tunel1"></a-gltf-model>
+<a-gltf-model src="#tunel2"></a-gltf-model>
+<a-gltf-model src="#tunel3"></a-gltf-model>
+<a-gltf-model src="#tunel4"></a-gltf-model>
+<a-gltf-model src="#tunel5"></a-gltf-model>
+<a-gltf-model src="#wave"></a-gltf-model>
+
+
+<!-- prueba de mixins -->
+
+<a-entity mixin="red cube"></a-entity>
+<a-entity mixin="blue cube"></a-entity>
+
+
+</a-scene>
+
+</body>
+</html>
