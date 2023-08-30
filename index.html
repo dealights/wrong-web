@@ -7,11 +7,10 @@
     <title>Wrong Web</title>
 
     <!-- scripts -->
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>  
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script> 
 
     <!-- assets -->
     <a-assets>
@@ -173,6 +172,7 @@
         <a-asset-item id="tunel4" src="/assets/3d/tunel4.glb"></a-asset-item>
         <a-asset-item id="tunel5" src="/assets/3d/tunel5.glb"></a-asset-item>
         <a-asset-item id="wave" src="/assets/3d/wave.gltf"></a-asset-item>
+       
         
         <!-- audios -->
     
@@ -227,7 +227,7 @@ light="type: hemisphere; color: #7f7fff; intensity: 0.6; groundColor: black" vis
 
 </a-entity>
 
-<!-- iluminación extra -->
+<!-- iluminacion extra -->
 
 <a-entity light="type: ambient"></a-entity>
 
@@ -255,7 +255,7 @@ light="type: hemisphere; color: #7f7fff; intensity: 0.6; groundColor: black" vis
 
 </a-entity>
 
-<!-- instalación esferas -->
+<!-- instalacion esferas -->
 
 <a-entity esfericas id="esfericas">
 <a-sphere src="#cielo" radius="3" position="17.28531 0.5 -39.71621" material="" geometry=""></a-sphere>
@@ -299,51 +299,47 @@ light="type: hemisphere; color: #7f7fff; intensity: 0.6; groundColor: black" vis
     <a-sphere src="#miva" id="bolamiva" position="32.98839 8 -3" rotation="0 -172 -29" material="" geometry="radius: 8"></a-sphere>
 </a-entity>
 
-<!-- 3d corregir de gltf model a entity-->
+<!-- 3d -->
 
 
 
 <a-entity gltf-model="#lab1" scale="0.5 0.5 0.5" position="-17.99337 60.82283 -11.58476"></a-entity>
-
 <a-entity gltf-model="#lab2" scale="1 1 1" position="-15 0 -6.33493"></a-entity>
 <a-entity gltf-model="#lab3" scale="1 1 1" position="-10 0 -6.33493"></a-entity>
-
-<a-entity tuneles id="chorlito" scale="1 1 1" position="-31.83509 0 0">
-<a-entity gltf-model="#tunel" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-entity>
-<a-entity gltf-model="#tunel1" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-entity>
-<a-entity gltf-model="#tunel2" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-entity>
-<a-entity gltf-model="#tunel3"  scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-entity>
-<a-entity gltf-model="#tunel4" scale="0.1 0.1 0.1" position="-17.70242 0 54.45655"></a-entity>
-<a-entity gltf-model="#tunel5" scale="0.2 0.2 0.5" position="-17.70242 0 54.45655"></a-entity>
-</a-entity>
-
+<a-entity gltf-model="#chorlito" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#tunel" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#tunel1" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#tunel2" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#tunel3"  scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#tunel4" scale="0.1 0.1 0.1" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#tunel5" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
 <a-entity gltf-model="#lab" id="laboratorio" position="-24.82394 0 0"></a-entity>
 
-<a-entity gltf-model="#adn"></a-entity>
-<a-entity gltf-model="#adn2"></a-entity>
-<a-entity gltf-model="#avion"></a-entity>
-<a-entity gltf-model="#bateria"></a-entity>
-<a-entity gltf-model="#box1"></a-entity>
-<a-entity gltf-model="#cohete"></a-entity>
-<a-entity gltf-model="#cohete2"></a-entity>
-<a-entity gltf-model="#compu1"></a-entity>
-<a-entity gltf-model="#compu2"></a-entity>
-<a-entity gltf-model="#computadora"></a-entity>
-<a-entity gltf-model="#consola"></a-entity>
-<a-entity gltf-model="#corazon"></a-entity>
-<a-entity gltf-model="#corazon2"></a-entity>
-<a-entity gltf-model="#cuarto"></a-entity>
-<a-entity gltf-model="#cubes"></a-entity>
-<a-entity gltf-model="#cubo"></a-entity>
-<a-entity gltf-model="#dna"></a-entity>
-<a-entity gltf-model="#escaleras"></a-entity>
-<a-entity gltf-model="#escaleras2"></a-entity>
-<a-entity gltf-model="#escaleras3"></a-entity>
-<a-entity gltf-model="#escaleras4"></a-entity>
-<a-entity gltf-model="#escaleras5"></a-entity>
-<a-entity gltf-model="#escaleras6"></a-entity>
-<a-entity gltf-model="#escaleras7"></a-entity>
-<a-entity gltf-model="#escaleras8"></a-entity>
+<a-entity gltf-model="#adn" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#adn2" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#avion" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#bateria" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#box1" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#cohete" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#cohete2" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#compu1" scale="0.2 0.2 0.5" position="-17.70242 0 10"></a-entity>
+<a-entity gltf-model="#compu2" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#computadora" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#consola" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#corazon" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#corazon2" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#cuarto" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#cubes" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#cubo" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#dna" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras2" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras3" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras4" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras5" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras6" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras7" scale="1 1 1" position="-31.83509 0 20"></a-entity>
+<a-entity gltf-model="#escaleras8" scale="1 1 1" position="-31.83509 0 20"></a-entity>
 <a-entity gltf-model="#escaleras9"></a-entity>
 <a-entity gltf-model="#escaleras10"></a-entity>
 <a-entity gltf-model="#espiral"></a-entity>
